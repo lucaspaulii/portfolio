@@ -59,6 +59,7 @@ button:hover {
     width: 45px;
     height: auto;
     transition: all 1.5s ease 0s;
+    cursor: pointer;
 }
 
 .logo:hover {
@@ -75,6 +76,8 @@ h1 {
     font-weight: 500;
     padding-right: 10px;
     font-size: 2.5rem;
+    cursor: pointer;
+    transition: all 0.35s ease 0s;
 }
 
 .subtitle {
@@ -205,7 +208,6 @@ h1 {
 @media only screen and (max-width: 1400px) {
     .container{
         grid-template-rows: 1fr 2fr 3fr 1fr 200px 1fr 1fr;
-        min-height: -moz-fit-content;
         min-height: fit-content;
         grid-template-areas: 
         "a a"
@@ -232,6 +234,24 @@ h1 {
     }
     .skillscontent {
         justify-self: center;
+        width: fit-content;
+    }
+    .skillscontent img {
+        height: 80px;
+        width: auto;
+        padding-left: 20px;
+        transition: all 0.3s ease 0s;
+    }
+    header {
+        padding: 30px 2%;
+        background-color: whitesmoke;
+        height: 60px;
+    }
+    .header li, .header a, .header button {
+        font-size: 14px;
+    }
+    button {
+        padding: 5px 10px;
     }
 }
 

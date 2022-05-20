@@ -1,16 +1,24 @@
 const title = document.getElementById("title");
+const logo = document.getElementById("logo");
 
-let randNum = () => {
-    let num = Math.floor(Math.random() * 255);
+let randNumColor = () => {
+    let num = Math.floor(Math.random() * 256);
     return num
 }
 
 let randColor = () => {
-    return 'rgb('+ randNum() + ',' + randNum() + ',' + randNum() + ')'
+    return 'rgb('+ randNumColor() + ',' + randNumColor() + ',' + randNumColor() + ')'
 }
 
-let newColor = randColor();
-
 title.addEventListener('click', function onClick() {
-    title.style.color = newColor; 
+    title.style.color = 'whitesmoke';
+})
+
+logo.addEventListener('click', function onClickLogo() {
+    title.style.color = randColor();
+    logo.style.transform = "rotate(-360deg)";
+})
+
+logo.addEventListener('mouseout', function onMouseOut() {
+    logo.style.transform = "";
 })
